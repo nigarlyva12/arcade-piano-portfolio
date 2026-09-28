@@ -514,5 +514,142 @@ piano-arena {
 .stage--projects   { --accent: #00ff88; }
 .stage--experience { --accent: #b04dff; }
 .stage--contact    { --accent: #ff2e5b; }
+/* --- HOME --- */
+
+.home-name {
+  margin: 22px 0 0;
+  font-weight: 400;
+  font-size: clamp(24px, 4.2vw, 44px);
+  line-height: 1.2;
+  color: #ffffff;
+  text-shadow: 3px 3px 0 #ff2bd6;
+}
+
+.home-class {
+  margin-top: 18px;
+  font-size: 11px;
+  color: #ffe14d;
+}
+
+.home-text {
+  margin: 28px 0 0;
+  max-width: 56ch;
+  font-size: 18px;
+  line-height: 1.65;
+  color: #cfcbf2;
+  text-wrap: pretty;
+}
+
+.controls {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border: 2px solid #2a1c66;
+  background: #0c0a24;
+}
+
+.control-key {
+  padding: 6px 8px;
+  background: #22e8ff;
+  color: #04030a;
+  font-size: 9px;
+}
+
+.control-text {
+  font-size: 15px;
+  color: #cfcbf2;
+}
+/* --- ABOUT --- */
+
+.about-cards {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 10px;
+}
+
+.about-card {
+  padding: 18px;
+  border: 2px solid #ffb000;
+  background: rgba(255, 176, 0, 0.06);
+}
+
+.about-card-label {
+  font-size: 8px;
+  color: #ffb000;
+}
+
+.about-card-value {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  background: #00ff88;
+  box-shadow: 0 0 10px #00ff88;
+}
 
 
+/* --- SKILLS --- */
+
+.skill-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px 40px;
+}
+
+.skill-group-name {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #2f8cff;
+  font-size: 9px;
+  color: #2f8cff;
+}
+
+.skill-list {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skill-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+}
+
+.skill-name {
+  font-size: 16px;
+  color: #ecebff;
+}
+
+.skill-bar {
+  display: flex;
+  gap: 2px;
+}
+
+.skill-seg {
+  width: 9px;
+  height: 12px;
+  background: rgba(47, 140, 255, 0.16);
+}
+
+.skill-seg.on {
+  background: #2f8cff;
+}
