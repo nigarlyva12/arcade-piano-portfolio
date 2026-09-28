@@ -268,5 +268,94 @@ piano-arena {
   border-color: #ff2bd6;
   color: #ff2bd6;
 }
+/* --------KEY BUTTONS ---------- */
+
+.rail {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 0 20px 28px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.app.started:not(.panel-open) .rail {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.rail-hint {
+  font-size: 9px;
+  color: #a9a4d8;
+}
+
+.rail-keys {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.key-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px 8px 8px;
+  border: 2px solid var(--key-color);
+  background: rgba(4, 3, 10, 0.78);
+  cursor: pointer;
+  box-shadow: 0 4px 0 var(--key-color);
+  transform: translateY(0);
+  transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.15s ease;
+}
+
+.key-button:hover {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 currentColor;
+  background: rgba(40, 20, 90, 0.85);
+}
+
+.key-button:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+.key-number {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  background: var(--key-color);
+  color: #04030a;
+  font-size: 10px;
+}
+
+.key-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.key-name {
+  font-size: 10px;
+  color: #ffffff;
+}
+
+.key-status {
+  font-size: 7px;
+  color: #ffe14d;
+}
+
+.key-status.done {
+  color: #00ff88;
+}
 
 
