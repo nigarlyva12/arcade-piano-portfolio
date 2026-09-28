@@ -39,3 +39,36 @@ const panelTabs = document.getElementById('panel-tabs');
 const stageContent = document.getElementById('stage-content');
 const wipe = document.getElementById('wipe');
 const popupLayer = document.getElementById('popup-layer');
+
+const railButtons = {};
+const tabButtons = {};
+function createElement(tag, className, text) {
+  const element = document.createElement(tag);
+  if (className) {
+    element.className = className;
+  }
+  if (text !== undefined) {
+    element.textContent = text;
+  }
+  return element;
+}
+
+function findKey(id) {
+  return KEYS.find(function (key) {
+    return key.id === id;
+  });
+}
+
+function hasVisited(id) {
+  return state.visited.includes(id);
+}
+
+function sendToPiano(name, detail) {
+  window.dispatchEvent(new CustomEvent('piano:' + name, { detail: detail || {} }));
+}
+
+function showAgain(element) {
+  element.classList.remove('show');
+  void element.offsetWidth;
+  element.classList.add('show');
+}
