@@ -58,4 +58,29 @@ const PORTFOLIO = {
       ],
     },
   ],
+
+  // ---------- PROJECTS ----------
+  projects: [
+    {
+      tag: "QUEST 01",
+      stars: "★★★",
+      name: "ABSCHLUSSPROJEKT",
+      text: "A monitoring tool that reads pg_stat_statements and shows slow PostgreSQL queries in charts.",
+      tech: ["Java", "Spring Boot", "PostgreSQL", "Chart.js"],
+    },
+    {
+      tag: "QUEST 02",
+      stars: "★★★",
+      name: "Project 2",
+      text: "Placeholder",
+      tech: ["Java", "Spring Boot", "PostgreSQL", "Thymeleaf"],
+    },
+    {
+      tag: "SIDE QUEST",
+      stars: "★★☆",
+      name: "Project 3",
+      text: "Placeholder.",
+      tech: ["Java", "Spring Boot", "PostgreSQL", "Placeholder"],
+    },
+  ],
 };
