@@ -72,3 +72,59 @@ function showAgain(element) {
   void element.offsetWidth;
   element.classList.add('show');
 }
+function createStage(id, kicker) {
+  const stage = createElement('div', 'stage stage--' + id);
+  stage.append(createElement('div', 'pixel stage-kicker', kicker));
+  return stage;
+}
+
+function createHeading(text, spaced) {
+  const className = 'pixel stage-heading' + (spaced ? ' stage-heading--spaced' : '');
+  return createElement('h2', className, text);
+}
+
+function renderHome() {
+  const stage = createStage('home', 'PLAYER PROFILE');
+
+  const controls = createElement('div', 'controls');
+  CONTROLS.forEach(function (control) {
+    const item = createElement('div', 'control');
+    item.append(
+      createElement('span', 'pixel control-key', control.key),
+      createElement('span', 'control-text', control.text)
+    );
+    controls.append(item);
+  });
+
+  stage.append(
+    createElement('h1', 'pixel home-name', PORTFOLIO.name),
+    createElement('div', 'pixel home-class', 'CLASS: ' + PORTFOLIO.home.className),
+    createElement('p', 'home-text', PORTFOLIO.home.text),
+    controls
+  );
+  return stage;
+}
+
+function renderAbout() {
+  const stage = createStage('about', 'LORE');
+
+  const cards = createElement('div', 'about-cards');
+  PORTFOLIO.about.cards.forEach(function (card) {
+    const value = createElement('div', 'about-card-value');
+    if (card.online) {
+      value.append(createElement('span', 'status-dot'));
+    }
+    value.append(card.value);
+
+    const cardElement = createElement('div', 'about-card');
+    cardElement.append(createElement('div', 'pixel about-card-label', card.label), value);
+    cards.append(cardElement);
+  });
+
+  stage.append(
+    createHeading(PORTFOLIO.about.heading, false),
+    createElement('p', 'stage-text', PORTFOLIO.about.text),
+    cards
+  );
+  return stage;
+}
