@@ -128,3 +128,68 @@ function renderAbout() {
   );
   return stage;
 }
+function renderSkills() {
+  const stage = createStage('skills', 'SKILL TREE');
+  stage.append(createHeading('STATS', true));
+
+  const groups = createElement('div', 'skill-groups');
+  PORTFOLIO.skillGroups.forEach(function (group) {
+    const list = createElement('div', 'skill-list');
+
+    group.items.forEach(function (skill) {
+      const bar = createElement('div', 'skill-bar');
+      for (let i = 0; i < 10; i++) {
+        const isFilled = i < skill.level;
+        bar.append(createElement('div', isFilled ? 'skill-seg on' : 'skill-seg'));
+      }
+
+      const row = createElement('div', 'skill-row');
+      row.append(createElement('span', 'skill-name', skill.name), bar);
+      list.append(row);
+    });
+
+    const groupElement = createElement('div', 'skill-group');
+    groupElement.append(createElement('div', 'pixel skill-group-name', group.name), list);
+    groups.append(groupElement);
+  });
+
+  stage.append(groups);
+  return stage;
+}
+
+function renderProjects() {
+    const stage = createStage('projects', 'QUEST LOG');
+    stage.append(createHeading('COMPLETED QUESTS', true));
+
+    const grid = createElement('div', 'project-grid');
+    PORTFOLIO.projects.forEach(function (project) {
+        const top = createElement('div', 'pixel project-top');
+        top.append(
+        createElement('span', 'project-tag', project.tag),
+        createElement('span', 'project-stars', project.stars)
+        );
+
+        const tech = createElement('div', 'project-tech');
+        project.tech.forEach(function (name) {
+        tech.append(createElement('span', 'chip', name));
+        });
+
+        const thumb = createElement('div', 'project-thumb');
+        thumb.append(createElement('span', 'pixel project-thumb-label', 'SCREENSHOT'));
+
+        const body = createElement('div', 'project-body');
+        body.append(
+        top,
+        createElement('div', 'pixel project-name', project.name),
+        createElement('p', 'project-text', project.text),
+        tech
+        );
+
+        const card = createElement('div', 'project-card');
+        card.append(thumb, body);
+        grid.append(card);
+    });
+
+    stage.append(grid);
+    return stage;
+}
