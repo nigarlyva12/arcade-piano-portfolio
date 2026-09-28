@@ -113,4 +113,16 @@ const PORTFOLIO = {
       current: false,
     },
   ],
+
+  // ---------- CONTACT ----------
+  contact: {
+    heading: "JOIN THE CLUB",
+    text: "Looking for a full-time Java developer position from February 2027. I answer within a day or two.",
+    email: "nigarlyva@gmail.com", 
+    links: [
+      { label: "GITHUB", url: "https://github.com/nigarlyva12" },
+      { label: "LINKEDIN", url: "https://www.linkedin.com/in/nigar-aliyeva-76839436a/" }, 
+      { label: "RÉSUMÉ", url: "#" }, // TODO
+    ],
+  },
 };
