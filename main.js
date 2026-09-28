@@ -193,3 +193,57 @@ function renderProjects() {
     stage.append(grid);
     return stage;
 }
+function renderExperience() {
+  const stage = createStage('experience', 'CAMPAIGN');
+  stage.append(createHeading('LEVELS CLEARED', true));
+
+  const list = createElement('div', 'level-list');
+  PORTFOLIO.experience.forEach(function (job) {
+    const side = createElement('div', 'level-side');
+    side.append(
+      createElement('span', 'pixel level-number', job.level),
+      createElement('span', 'pixel level-years', job.years)
+    );
+
+    const info = createElement('div', 'level-info');
+    info.append(
+      createElement('div', 'level-role', job.role),
+      createElement('div', 'pixel level-company', job.company),
+      createElement('p', 'level-text', job.text)
+    );
+
+    const level = createElement('div', job.current ? 'level current' : 'level');
+    level.append(side, info);
+    list.append(level);
+  });
+
+  stage.append(list);
+  return stage;
+}
+
+function renderContact() {
+  const stage = createStage('contact', 'MULTIPLAYER');
+
+  const button = createElement('a', 'pixel contact-button', 'SEND MESSAGE ►');
+  button.href = 'mailto:' + PORTFOLIO.contact.email;
+
+  const links = createElement('div', 'contact-links');
+  PORTFOLIO.contact.links.forEach(function (link) {
+    const anchor = createElement('a', 'pixel contact-link', link.label);
+    anchor.href = link.url;
+    if (link.url.startsWith('http')) {
+      anchor.target = '_blank';
+      anchor.rel = 'noopener';
+    }
+    links.append(anchor);
+  });
+
+  stage.append(
+    createHeading(PORTFOLIO.contact.heading, false),
+    createElement('p', 'contact-text', PORTFOLIO.contact.text),
+    button,
+    createElement('div', 'contact-email', PORTFOLIO.contact.email),
+    links
+  );
+  return stage;
+}
