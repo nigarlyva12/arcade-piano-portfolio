@@ -4,6 +4,7 @@ A portfolio built around a 3D grand piano. Instead of scrolling through sections
 
 ![alt text](image.png)
 
+**Live demo:** https://nigarlyva12.github.io/arcade-piano-portfolio/
 ---
  
 ## Why a piano?
