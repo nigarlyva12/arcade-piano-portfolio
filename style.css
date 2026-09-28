@@ -132,4 +132,141 @@ piano-arena {
   color: #22e8ff;
   animation: bob 1s steps(2) infinite;
 }
+/* ---------- top bar ---------- */
+
+.hud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 6;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 22px 28px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.app.started .hud {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hud-player {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.hud-badge {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  background: #ff2bd6;
+  color: #04030a;
+  font-size: 12px;
+  box-shadow: 0 0 18px rgba(255, 43, 214, 0.6);
+}
+
+.hud-info {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.hud-name {
+  font-size: 11px;
+  color: #ffffff;
+}
+
+.hud-level {
+  font-size: 9px;
+  color: #22e8ff;
+}
+
+.hud-stats {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  flex-wrap: wrap;
+}
+
+.hud-xp-block,
+.hud-score-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.hud-xp-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hud-label {
+  font-size: 9px;
+  color: #a9a4d8;
+}
+
+.xp-bar {
+  display: flex;
+  gap: 3px;
+  padding: 3px;
+  border: 2px solid #3a1f8a;
+  background: rgba(4, 3, 10, 0.7);
+}
+
+.xp-seg {
+  width: 18px;
+  height: 10px;
+  background: rgba(58, 31, 138, 0.5);
+}
+
+.xp-seg.filled {
+  background: var(--seg-color);
+  box-shadow: 0 0 8px var(--seg-color);
+}
+
+.hud-progress {
+  font-size: 9px;
+  color: #a9a4d8;
+}
+
+.hud-score {
+  font-size: 18px;
+  color: #ffe14d;
+  text-shadow: 0 0 12px rgba(255, 225, 77, 0.55);
+}
+
+.hud-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.hud-button {
+  padding: 10px 12px;
+  border: 2px solid #3a1f8a;
+  background: rgba(4, 3, 10, 0.7);
+  cursor: pointer;
+  font-size: 9px;
+  color: #ecebff;
+}
+
+.hud-button:hover {
+  border-color: #22e8ff;
+  color: #22e8ff;
+}
+
+.hud-button--pink:hover {
+  border-color: #ff2bd6;
+  color: #ff2bd6;
+}
+
 
