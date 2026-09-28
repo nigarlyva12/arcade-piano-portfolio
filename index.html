@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nigar Aliyeva - Software Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Chakra+Petch:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="app" id="app">
+        <piano-arena id="piano"></piano-arena>
+
+        <!-- dark edges around the screen -->
+        <div class="vignette"></div>
+
+        <!-- title screen -->
+        <div class="title-screen" id="title-screen">
+            <div class="title-top">
+                <div class="pixel title-player">PLAYER 1</div>
+                <div class="pixel title-name" id="title-name"></div>
+                <div class="pixel title-role" id="title-role"></div>
+            </div>
+            <div class="title-bottom">
+                <div class="pixel press-start">PRESS START</div>
+                <div class="pixel title-hint">ZOOM INTO THE KEYS TO EXPLORE</div>
+                <div class="pixel title-arrow">▼</div>
+            </div>  
+        </div>
+    </div>
 </body>
 </html>
