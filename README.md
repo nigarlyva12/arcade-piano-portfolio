@@ -20,7 +20,7 @@ The other thing I wanted to show is that I enjoy building things just to see if 
 - Six navigation keys (also reachable with number keys 1–6, arrows once open)
 - XP bar, score, and a "stage unlocked" popup on first visit to each stage
 - Flat, clickable fallback if WebGL isn't available
-- No build step — just open `index.html` or serve the folder
+- No build step, just open `index.html` or serve the folder
 ---
  
 ## Tech stack
@@ -40,3 +40,7 @@ The other thing I wanted to show is that I enjoy building things just to see if 
 ├── main.js      # page logic, stage rendering, HUD
 ├── piano.js     # the 3D piano
 
+---
+## Still to do
+ 
+- Fill in the remaining `TODO`s in `data.js`
