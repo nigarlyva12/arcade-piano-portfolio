@@ -83,4 +83,34 @@ const PORTFOLIO = {
       tech: ["Java", "Spring Boot", "PostgreSQL", "Placeholder"],
     },
   ],
+
+  // ---------- EXPERIENCE ----------
+  experience: [
+    {
+      level: "LV 3",
+      years: "SEP 2024 - JAN 2027",
+      role: "Junior Developer (Ausbildung)",
+      company: "SPIE Germany Switzerland Austria",
+      text:
+        "Accelerated Ausbildung as Fachinformatikerin für Anwendungsentwicklung. " +
+        "Placeholder",
+      current: true,
+    },
+    {
+      level: "LV 2",
+      years: "Placeholder",
+      role: "Mathematics Teacher",
+      company: "DERS EVI EDUCATION CENTER", 
+      text: "Placeholder",
+      current: false,
+    },
+    {
+      level: "LV 1",
+      years: "Placeholder",
+      role: "B.Sc. Petroleum Engineering",
+      company: "BAKU HIGHER OIL SCHOOL",
+      text: "Placeholder",
+      current: false,
+    },
+  ],
 };
