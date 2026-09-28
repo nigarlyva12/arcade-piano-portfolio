@@ -247,3 +247,11 @@ function renderContact() {
   );
   return stage;
 }
+const STAGE_RENDERERS = {
+  home: renderHome,
+  about: renderAbout,
+  skills: renderSkills,
+  projects: renderProjects,
+  experience: renderExperience,
+  contact: renderContact,
+};
