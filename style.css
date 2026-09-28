@@ -508,5 +508,11 @@ piano-arena {
   color: #cfcbf2;
   text-wrap: pretty;
 }
+.stage--home       { --accent: #22e8ff; }
+.stage--about      { --accent: #ffb000; }
+.stage--skills     { --accent: #2f8cff; }
+.stage--projects   { --accent: #00ff88; }
+.stage--experience { --accent: #b04dff; }
+.stage--contact    { --accent: #ff2e5b; }
 
 
