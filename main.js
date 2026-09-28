@@ -6,3 +6,36 @@ const KEYS = [
   { id: 'experience', label: 'Experience', color: '#b04dff' },
   { id: 'contact', label: 'Contact', color: '#ff2e5b' },
 ];
+const CONTROLS = [
+  { key: '1–6', text: 'Jump to a stage' },
+  { key: '← →', text: 'Next / previous' },
+  { key: 'ESC', text: 'Back to the keys' },
+];
+
+const POINTS_PER_NEW_STAGE = 100;
+const POINTS_PER_CLICK = 10;
+const POINTS_FOR_ALL_STAGES = 600;
+
+const state = {
+  started: false,
+  panelOpen: false,
+  activeId: null,
+  visited: [],
+  clicks: 0,
+};
+
+let popupTimer = null;
+let wipeTimer = null;
+let closeTimer = null;
+
+const app = document.getElementById('app');
+const titleScreen = document.getElementById('title-screen');
+const xpBar = document.getElementById('xp-bar');
+const railKeys = document.getElementById('rail-keys');
+const rail = document.getElementById('rail');
+const panel = document.getElementById('panel');
+const panelTitle = document.getElementById('panel-title');
+const panelTabs = document.getElementById('panel-tabs');
+const stageContent = document.getElementById('stage-content');
+const wipe = document.getElementById('wipe');
+const popupLayer = document.getElementById('popup-layer');
